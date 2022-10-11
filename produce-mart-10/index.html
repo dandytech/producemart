@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produce-markt</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/asset/css/bootstrap.css">
+    <link rel="stylesheet" href="/asset/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/asset/css/bootstrap.min2.css">
+</head>
+<body>
+    <!--Header-->
+    <div class="header" id="headerScroll">
+        <div class="logo">
+            <img src="/images/logo.png" width="100%" alt="Produce-mark logo">
+        </div>
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#">View Products</a>
+                    </li>
+                    <li>
+                        <a href="#">Request a Product</a>
+                    </li>
+                    <li>
+                        <a href="#">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="search">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="logIn-SignUp">
+            <span>
+                Login
+            </span>
+            <button>
+                Sign Up Free
+            </button>
+        </div>
+    </div>
+<!--Script to fixed and change header-->
+    <script>
+        window.onscroll = function (){
+            myFunction ();
+        };
+
+        function myFunction () {
+            if (document.documentElement.scrollTop > 100){
+                document.getElementById("headerScroll").style.position = "fixed";
+                document.getElementById("headerScroll").style.boxShadow = 
+                "rgba(0, 0, 0, 0.24) 0px 3px 8px";
+                document.getElementById("headerScroll").style.backgroundColor = "#fefefe";
+            }else{
+                document.getElementById("headerScroll").style.position = "relative";
+                document.getElementById("headerScroll").style.boxShadow = "none";
+                document.getElementById("headerScroll").style.background = "none";
+            
+            }
+        }
+    </script>
+
+
+    <!--Hidden login and menu icon for small screen-->   
+    <div class="header2" id="headerScroll">
+        <div class="login">
+            <button>Login</button>
+        </div>
+        <div class="logo2">
+            <img src="/images/logo.png" width="100%" alt="logo2">
+        </div>
+        <div class="search2">
+            <span class="glyphicon glyphicon-search"></span>
+        </div>
+        <div class="menuIcon" id="openMenu" onclick="myOpener()">
+            <span class="glyphicon glyphicon-align-right"></span>
+        </div>
+    </div>
+    
+<!--Hidden side Menu bar-->
+    <div class="hiddenMenu" id="close" >
+        <div class="logo2">
+            <img src="/images/logo2.png" width="100%" alt="logo2">
+        </div>
+        <div class="cancel" onclick="myCloser()">
+            <img src="/images/canelIcon.png" width="100%" alt="closeIcon">
+        </div>
+    
+        <div class="menus">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#">View Product</a>
+                    </li>
+                    <li>
+                        <a href="#">Request a Product</a>
+                    </li>
+                    <li>
+                        <a href="#">Blog</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="btn1">
+                <button>login</button>
+            </div>
+            <br>
+            <button>Sign up free</button>
+        </div>
+        
+    </div>
+
+    <!--Open and Close script-->
+   <script>
+    //function to open the side menu
+    function myOpener (){
+        let open = document.getElementById("close");
+        if(open.style.display === 'block'){
+            open.style.display = "none";
+        }else{
+            open.style.display = "block";
+
+        }
+        
+    }
+    
+    //function to close the menu
+    function myCloser (){
+        let close = document.getElementById("close");
+            if(close.style.display === 'none'){
+                close.style.display = "block";
+            }else{
+                close.style.display = "none";
+            }
+        
+    }
+    
+   </script> 
+<!--Header end-->
+
+    <!--Section 1 for Welcome slide-->
+    <section>
+        <div class="welcomeSlide">
+        <!--Carousel Start-->
+      <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+
+      <!--First Slide-->
+      <div class="carousel-inner">
+        <div class="slide1 carousel-item active">
+            <div class="slide1Text text-center">
+                No 1. Agriculture E-Commerce Platform in Africa
+            </div>
+            <div class="requestProduct">
+                <button>
+                    Request Product <span class="glyphicon glyphicon-arrow-right"></span>
+                </button>
+            </div>
+        </div>
+      <!--Second Slide-->
+        <div class="slide2 carousel-item">
+            <div class="slide2Text text-center">
+                Making Sales and Purchase of Agricultural Products Digital
+            </div>
+            <div class="requestProduct">
+                <button>
+                    Request Product <span class="glyphicon glyphicon-arrow-right"></span>
+                </button>
+            </div>
+        </div>
+      <!--Third Slide-->
+        <div class="slide3 carousel-item">
+            <div class="slide3Text text-center">
+                A Reliable and Convenient Marketplace for Agricultural Products
+            </div>
+            <div class="requestProduct">
+                <button>
+                    Request Product <span class="glyphicon glyphicon-arrow-right"></span>
+                </button>
+            </div>
+        </div>
+      </div>
+      <!--Next and Previous Buttons-->
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+<!--Carousel end-->
+
+<!--Fixed Feedback-->
+    <div class="feedbackbox">
+        <a href="#">Feedback</a>
+    </div>
+    <!--Fixed Get Help-->
+    <div class="getHelp">
+        <div class="text"><a href="#">Get Help</a></div>
+        <div class="icon">
+            <span class="glyphicon glyphicon-envelope"></span>
+        </div>
+    </div>
+
+    </div>
+    </section>
+
+<!--section 2 for Icons-->
+    <div class="icons">
+        <div class="iconbox">
+            <div class="iconboxIcon">
+                <img src="/images/icon1.png" width="100%" alt="icon1">
+            </div>
+            <div class="iconboxText">
+                <p>Products Sold</p>
+                <span>1M +</span>
+            </div>
+        </div>
+        <div class="iconbox">
+            <div class="iconboxIcon">
+                <img src="/images/icon2.png" width="100%" alt="icon1">
+            </div>
+            <div class="iconboxText">
+                <p>Buyers</p>
+                <span>2100K +</span>
+            </div>
+        </div>
+        <div class="iconbox">
+            <div class="iconboxIcon">
+                <img src="/images/icon3.png" width="100%" alt="icon1">
+            </div>
+            <div class="iconboxText">
+                    <p>Suppliers</p>
+                <span>1201K +</span>
+            </div>
+        </div>
+        <div class="iconbox">
+            <div class="iconboxIcon">
+                <img src="/images/icon4.png" width="100%" alt="icon1">
+            </div>
+            <div class="iconboxText">
+                <p>Shipper</p>
+                <span>129 +</span>
+            </div>
+        </div>
+        <div class="iconbox last">
+            <div class="iconboxIcon">
+                <img src="/images/icon5.png" width="100%" alt="icon1">
+            </div>
+            <div class="iconboxText">
+                <p>Inspectors</p>
+                <span>190 +</span>
+            </div>
+        </div>
+    </div>
+
+    <!--Section 3-->
+    <div class="whoWeAre">
+        <div class="text">
+            <button>PRODUCEMART</button>
+            <h1>
+                WHO IS PRODUCEMART?
+            </h1>
+            <p>
+                <a href="#">Producemart.com</a> 
+                is a brand new online B2B marketplace
+                for wholesale agricultural produce and
+                ingredients. It aims to make it simpler 
+                than ever to list and source produce at
+                a local, regional or international level.
+                <br>
+                <span><a href="#">Learn More</a> <span class="glyphicon glyphicon-arrow-right"></span></span>
+            </p>
+            <div class="pm">
+                <img src="/images/download.png" width="100%" alt="pm-Icon">
+            </div> 
+        </div>
+        
+        <div class="image">
+            <img src="/images/payment.png" width="100%" alt="Payment Image">
+        </div>
+    </div>
+    
+    <!--section 4-->
+    <div class="howItWorksText">
+        <button>
+            PRODUCEMART
+        </button>
+        <h1>
+            HOW IT WORKS
+        </h1>
+        <p>
+            Find out how you can start supplying or buying on Producemart in 9 easy steps.
+        </p>
+    </div>
+<div class="howItWorksCircle">
+    <div class="holder div1">
+        <div class="howItWorksBox text-center">
+            <div class="number">1</div>
+            <div class="imgText">
+                <img src="/images/img1.png" width="40%" alt="img1"><br>
+            <p>Supplier undergoes Audit process to become a verified supplier</p>
+            </div>
+        </div>
+        <div class="rightIcon">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </div>
+
+        <!--hidden down icon for small Screen-->  
+        <div class="downIcon">
+            <span class="glyphicon glyphicon-chevron-down"></span>
+        </div>
+    </div>
+
+    <div class="holder div2">
+        <div class="howItWorksBox text-center">
+            <div class="number">2</div>
+            <div class="imgText">
+                <img src="/images/img2.png" width="40%" alt="img1"><br>
+            <p>Supplier uploads product to ProduceMart</p>
+            </div>
+        </div>
+        <div class="rightIcon">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </div>
+        <!--hidden down icon for small Screen-->  
+        <div class="downIcon">
+            <span class="glyphicon glyphicon-chevron-down"></span>
+        </div>
+    </div>
+    <div class="holder div3" >
+        <div class="howItWorksBox text-center">
+            <div class="number">3</div>
+            <div class="imgText">
+                <img src="/images/img3.png" width="40%" alt="img1"><br>
+            <p>Buyer finds product and request a quote</p>
+            </div>
+        </div>
+        <div class="rightIcon">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </div>
+        <!--hidden down icon for small Screen-->  
+        <div class="downIcon">
+            <span class="glyphicon glyphicon-chevron-down"></span>
+        </div>
+    </div>
+    <div class="holder div4">
+        <div class="howItWorksBox text-center">
+            <div class="number">4</div>
+            <div class="imgText">
+                <img src="/images/img4.png" width="40%" alt="img1"><br>
+            <p>Supplier & Shipper confirm product availability and respond with a quote</p>
+            </div>
+        </div>
+        <div class="rightIcon">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </div>
+        <!--hidden down icon for small Screen-->  
+        <div class="downIcon">
+            <span class="glyphicon glyphicon-chevron-down"></span>
+        </div>
+    </div>
+    <div class="holder div5"> 
+        <div class="howItWorksBox text-center">
+            <div class="number">5</div>
+            <div class="imgText">
+                <img src="/images/img5.png" width="40%" alt="img1"><br>
+            <p>If a Buyer is happy to proceed, they pay into escrow to show supplier they are commited to the transaction</p>
+            </div>
+        </div>
+        <div class="rightIcon">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </div>
+        <!--hidden down icon for small Screen-->  
+        <div class="downIcon">
+            <span class="glyphicon glyphicon-chevron-down"></span>
+        </div>
+    </div>
+    <div class="holder div6">
+        <div class="howItWorksBox text-center">
+            <div class="number">6</div>
+            <div class="imgText">
+                <img src="/images/img2.png" width="40%" alt="img1"><br>
+            <p>All orders are inspected by our 3rd party inpector partners - SGS and if the quantity and quality of the product are verified, the order is released to the shipper for forwarding</p>
+            </div>
+        </div>
+        <div class="rightIcon">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </div>
+        <!--hidden down icon for small Screen-->  
+        <div class="downIcon">
+            <span class="glyphicon glyphicon-chevron-down"></span>
+        </div>
+    </div>
+    <div class="holder div7">
+        <div class="howItWorksBox text-center">
+            <div class="number">7</div>
+            <div class="imgText">
+                <img src="/images/img4.png" width="40%" alt="img1"><br>
+            <p>Shipper confirms receipt of order and releases airway bill or Bill of laden</p>
+            </div>
+        </div>
+        <div class="rightIcon">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </div>
+        <!--hidden down icon for small Screen-->  
+        <div class="downIcon">
+            <span class="glyphicon glyphicon-chevron-down"></span>
+        </div>
+    </div>
+    <div class="holder div8">
+        <div class="howItWorksBox text-center">
+            <div class="number">8</div>
+            <div class="imgText">
+                <img src="/images/img5.png" width="40%" alt="img1"><br>
+            <p>ProduceMart releases payment to supplier</p>
+            </div>
+        </div>
+        <div class="rightIcon">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </div>
+        <!--hidden down icon for small Screen-->  
+        <div class="downIcon">
+            <span class="glyphicon glyphicon-chevron-down"></span>
+        </div>
+    </div>
+    <div class="holder div9">
+        <div class="howItWorksBox text-center">
+            <div class="number">9</div>
+            <div class="imgText">
+                <img src="/images/img1.png" width="50%" alt="img1"><br>
+            <p>Order received by buyer</p>
+            </div>
+        </div>
+        <div class="rightIcon">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </div>
+        <!--hidden down icon for small Screen-->  
+        <div class="downIcon">
+            <span class="glyphicon glyphicon-chevron-down"></span>
+        </div>
+    </div>
+    </div>
+
+
+    <div class="ourProduct">
+        <button>PRODUCEMART</button>
+        <h1>OUR PRODUCTS</h1>
+    </div>
+    <div class="allProduct">
+        <nav>
+            <ul>
+                <li style="border-bottom: 2px solid lightgreen; padding-bottom: 10px;">
+                    <a href="#"> 
+                        All Products
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        fruits
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Fruits
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Flower
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="allProductImg">
+        <div class="allProductImgbox">
+            <br><br>
+            <img src="/images/p1.jpg" width="100%" alt="Product1">
+            <h2>Titi</h2>
+            <p>$400 per 50</p>
+            <li>
+                <a href="#">
+                    View Product
+                    <span class="glyphicon glyphicon-arrow-right">
+                    </span>
+                </a>
+            </li>
+        </div>
+        <div class="allProductImgbox">
+            <br><br>
+            <img src="/images/p2.jpg" width="100%" alt="Product2">
+            <h2>Testing again</h2>
+            <p>$23 per 1</p>
+            <li>
+                <a href="#">
+                    View Product
+                    <span class="glyphicon glyphicon-arrow-right">
+                    </span>
+                </a>
+            </li>
+        </div>
+        <div class="allProductImgbox">
+            <img src="/images/p3.jpg" width="100%" alt="Product3">
+            <br><br>
+            <h2>Pinaeapples</h2>
+            <p>$200 per 15 Cartons</p>
+            <li>
+                <a href="#">
+                    View Product
+                    <span class="glyphicon glyphicon-arrow-right">
+                    </span>
+                </a>
+            </li>
+        </div>
+        <div class="allProductImgbox">
+            <img src="/images/p4.jpg" width="100%" alt="Product4">
+        <br><br>
+            <h2>New Prod</h2>
+            <p>$4,000 per 50box</p>
+            <li>
+                <a href="#">
+                    View Product
+                    <span class="glyphicon glyphicon-arrow-right">
+                    </span>
+                </a>
+            </li>
+        </div>
+    </div>
+    <div class="twistedPair">
+        <div class="twistedPairbox">
+            <div class="box">
+                <img src="/images/b1.png" width="100%" alt="box1">
+            <br><br>
+            <h2>Monument</h2>
+            <p>$300 per 20pack</p>
+            <li>
+                <a href="#">
+                    View Product
+                    <span class="glyphicon glyphicon-arrow-right">
+                    </span>
+                </a>
+            </li>
+            </div>
+            <div class="box">
+                <img src="/images/b2.jpg" width="100%" alt="box2">
+                <br><br>
+            <h2>Product testing</h2>
+            <p>$300 per 1bag</p>
+            <li>
+                <a href="#">
+                    View Product
+                    <span class="glyphicon glyphicon-arrow-right">
+                    </span>
+                </a>
+            </li>
+            </div>
+        </div>
+        <div class="twistedPairbox">
+            <div class="proAdvert">
+
+            </div>
+            <div class="arrow">
+                View more
+                <span class="glyphicon glyphicon-arrow-right"> 
+            </div>
+        </div>
+    </div>
+
+    <!--Video Explainer-->
+    <div class="videoExplainer">
+        <button>PRODUCE MART</button>
+        <h1>EXPLAINER VIDEO</h1>
+    </div>
+    <div class="videoExplainerbox">
+
+    </div>
+
+    <!--client word section-->
+    <div class="clientWord">
+        <button>
+            TESTIMONIALS
+        </button>
+        <h1>WORDS FROM OUR CLIENTS</h1>
+    </div>
+
+     <!--Carousel Start-->
+    <div id="myCarousel2" class="carousel slide  m-auto" data-bs-ride="carousel">
+          <!--indicators/Dots-->
+       <div class="slideHolder">
+        
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#myCarousel2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#myCarousel2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+            <!--First Slide-->
+            <div class="carousel-inner">
+                <div class="clientSlide carousel-item active">
+                    <div class="box1">
+                        <div class="clientPic">
+                            <img src="/images/testimonial1.png" width="100%" alt="clientPic">
+                        </div>
+                        <div class="box2">
+                            <br><br>
+                            <p>quote</p>
+                            <p>
+                                "Produce Mart plays avery important role in the
+                                agricultural sector and to my business personall. i'm glad to be 
+                                one of the benefitiaries of this. purchases and sales have been 
+                                made very easy and smooth"
+                                <br><br>
+                                <h2>Chuks Uzo</h2>
+                                <p>Exporter</p>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            <!--Second Slide-->
+                <div class="clientSlide carousel-item">
+                <div class="box1">
+                    <div class="clientPic">
+                        <img style="border-radius: 50%;" src="/images/dan..JPG" width="65%" alt="clientPic">
+                    </div>
+                    <div class="box2">
+                        <br><br>
+                        <p>quote</p>
+                            <p>
+                                "Produce Mart plays avery important role in the
+                                agricultural sector and to my business personall. i'm glad to be 
+                                one of the benefitiaries of this. purchases and sales have been 
+                                made very easy and smooth"
+                                <br><br>
+                                <h2>Nwankwo Daniel</h2>
+                                <p>Importer & Exporter</p>
+                            </p>
+                    </div>
+                </div>
+                </div>
+
+            </div>
+        </div>
+      
+            <!--Next and Previous Buttons-->
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel2" data-bs-slide="prev">
+                <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel2" data-bs-slide="next">
+                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+            </button>
+    </div>
+  <!--Carousel end-->
+  
+        <!--fixed arrow right-->
+        <div class="arrowHolder">
+            <div class="fixedArrow">
+                <a href="#">
+                    <span class="glyphicon glyphicon-arrow-up"></span>
+                </a>
+            </div>
+        </div>
+
+
+        <!--Stay Updated section-->
+        <div class="stayUpdated">
+            
+        <div class="stayUpdated-text">
+            <h2>Stay up to date with our latest news and product updates</h2>
+            <p>Join our mailing list today and stay updated!</p>
+        </div>
+        <div class="stayUpdatedHolder1">
+            
+        <div class="stayUpdatedHolder2">
+            <div class="stayUpdated-input">
+                <label for="intro">Please introduce yourself?*</label>
+                <p>
+                    <input placeholder="Firstname" type="text">
+                </p>
+        </div>
+        <div class="stayUpdated-input">
+            <label for="">How can we reach you?*</label>
+            <p>
+                <input placeholder="Your email address" type="text" name="firstName" id="">
+            </p>
+        </div>
+        <div class="stayUpdated-input">
+            <label for="">
+                Tell us about your business*
+            </label>
+            <p>
+                <input placeholder="Company name" type="text" name="" id="">
+            </p>
+        </div>
+        <div class="stayUpdated-input">
+            <label for="">
+                Where do you based at?
+            </label>
+            <p>
+                <select name="option" id="">
+                    <option value="">Please mention your country </option>
+                    <option value="">Nigeria</option>
+                    <option value="">Ghana</option>
+                    <option value="">Togo</option>
+                </select>
+            </p>
+        </div>
+     </div>
+     <div class="stayUpdatedHolder2b">
+         <div class="stayUpdated-input">
+            <label for="">Lastname</label><br>
+            <p>
+                <input placeholder="Lastname" type="text" name="" id="">
+            </p>
+         </div>
+         <div class="stayUpdated-input">
+            <label for="">Are you a Buyer or Supplier?*</label>
+            <p>
+                <select name="option" id="">
+                    <option value="">Which option best describe you</option>
+                    <option value="">Newly started</option>
+                    <option value="">More than a year</option>
+                    <option value="">More than 10 year</option>
+                </select>
+            </p>
+         </div>
+         <div class="stayUpdated-input">
+            <label for="">Role/Position*</label>
+            <p>
+                <input placeholder="Manager, CEO, etc*" type="text" name="" id="">
+            </p>
+
+         </div>
+     </div>
+    </div>
+   
+
+        <div class="subscribe">
+            <button>Subscribe</button>
+        </div>
+        
+        <div class="yellowIcon">
+            <span class="glyphicon-chevron-right"></span>
+        </div>
+        
+        <div class="leftImg">
+            <img src="/images/leftIcon.png" width="5%" alt="">
+        </div>
+    </div>
+
+<!--Footer-->
+    <div class="footer">
+        <div class="footerHold">
+            <div class="footerHolderbox1">
+                <h2>Company</h2>
+        
+                <p>
+                    production is a brand new online B2B marketplace
+                    for wholesale agricultural produce and ingredients.
+                    It aims to make  it simpler than ever to list and 
+                    source produce at a local , regional or international level.
+                    <br>
+                    <span><img src="/images/locationIcon.png" width="10%" alt="locationIcon"> </span>
+                    128 City Road, London ECIV 2NX
+                </p>
+            </div>
+            <div class="footerHolder">
+                <h2>Services</h2>
+                <p>
+                   <a href="#">About Us</a>
+                   <br>
+                   <a href="#">Request a Product</a>
+                </p>
+            </div>
+            <div class="footerHolder">
+                <h2>Legal</h2>
+                <p>
+                   <a href="#">Terms & Conditions</a>
+                   <br>
+                   <a href="#">Privacy Policy</a>
+                   <br>
+                   <a href="#">Cookies Policy</a>
+                </p>
+            </div>
+            <div class="footerHolder">
+                <h2>Resources</h2>
+                <p>
+                   <a href="#">Blog</a>
+                   <br>
+                   <a href="#">FAQs</a>
+                </p>
+            </div>
+        </div>
+       <div class="hr">
+           <hr>
+       </div>
+       <div class="copyright">
+           copyright © <span id="date"></span> Produce Mart | all Rights Reserved | Version 0.10
+       </div>
+
+<!--Anination script-->
+       <script>
+        let date = new Date();
+        let year = date.getFullYear();
+        document.getElementById("date").innerHTML = year;
+       </script>
+    </div>
+    <script>
+        function animation (){
+            var reveal = document.querySelectorAll(
+                ".whoWeAre .image, .div1, .div2, .div3, .div4, .div5, .div6, .div7, .div8, .div9"
+            );
+        
+            for(var i = 0; i < reveal.length; i++){
+                var windowHeight = window.innerHeight;
+                var elementTop = reveal[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if(elementTop < windowHeight - elementVisible){
+                    reveal[i].classList.add("active");
+                }else{
+                    reveal[i].classList.remove("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", animation);
+        </script>
+        
+    <script src="/asset/js/bootstrap.bundle.min.js"></script>
+    <script src="/asset/js/bootstrap.js"></script>
+    <script src="/asset/js/bootstrap.min.js"></script>
+</body>
+</html>
